@@ -74,6 +74,10 @@ The predicate field allows for conditional execution of every instruction.
 | 120   | VN   | Overflow Negative (V == 2)          |
 | 121   | VC   | Overflow Clear (V == 0)             |
 
+### Opcode (4 trits)
+
+All opcodes are explained on the [Instruction Set](instruction-set.md) page.
+
 ## Register Encoding
 
 Registers are encoded using one tryte (6 trits):

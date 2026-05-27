@@ -1,2 +1,5 @@
-<!-- TODO -->
-
+- [Arithmetic Operations](instruction-set/arithmetic.md)
+- [Trit-Wise Operations](instruction-set/trit-wise.md)
+- [Memory Operations](instruction-set/memory-ops.md)
+- [Input/Output Operations](instruction-set/input-output.md)
+- [Other Operations](instruction-set/other.md)
