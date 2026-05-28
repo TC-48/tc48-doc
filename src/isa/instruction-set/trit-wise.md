@@ -4,34 +4,40 @@ Trit-wise instructions perform operations on individual trits of the operands.
 
 ## Logical Operations
 
-### MIN (Minimum)
+### MIN
 Performs a trit-wise minimum operation (equivalent to AND in binary logic).
+- **Opcode:** `0002`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** For each trit `i`, `dst[i] = min(src1[i], src2[i])`
 
-### MAX (Maximum)
+### MAX
 Performs a trit-wise maximum operation (equivalent to OR in binary logic).
+- **Opcode:** `0010`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** For each trit `i`, `dst[i] = max(src1[i], src2[i])`
 
-### NOT (Inversion)
-Performs a trit-wise inversion.
-- **Formats:** `RR`, `RI`
-- **Operation:** For each trit `i`, `dst[i] = 2 - src[i]`
-
-### ROT (Rotate/Add)
+### ROT
 Performs trit-wise addition modulo 3 (also known as a trit-wise rotation).
+- **Opcode:** `0011`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** For each trit `i`, `dst[i] = (src1[i] + src2[i]) mod 3`
 
+### NOT
+Performs a trit-wise inversion.
+- **Opcode:** `0021`
+- **Formats:** `RR`, `RI`
+- **Operation:** For each trit `i`, `dst[i] = 2 - src[i]`
+
 ## Shift Operations
 
-### SHL (Shift Left)
+### SHL
 Shifts the first operand left by the number of trits specified by the second operand.
+- **Opcode:** `0012`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 << src2`
 
-### SHR (Shift Right)
+### SHR
 Shifts the first operand right by the number of trits specified by the second operand.
+- **Opcode:** `0020`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 >> src2`
