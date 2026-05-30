@@ -27,9 +27,10 @@ The TC-48 instruction set is intentionally minimal yet fully functional.
 * **half**: Half of a word (four trytes) - **24 trits**.
 * **word**: The full machine word - **48 trits**.
 
-- **RAZ/AZ register** - Register with ID 0; its value is always zero, and all writes to it are ignored.
-- **RCF/CF register** - Register containing current execution flags (S, V, C).
-- **RPC/PC register** - Register containing the address of the next instruction to be executed by the CPU.
+* **RAZ/AZ register** - Register with ID 0; its value is always zero, and all writes to it are ignored.
+* **RCF/CF register** - Register containing current execution flags (S, V, C).
+* **RIP/IP register** - Register containing the address of the next instruction to be executed by the CPU.
+* **RSP/SP register** - Register that holds the memory address of the top of the stack.
 
 ## Document Scope
 This document defines
