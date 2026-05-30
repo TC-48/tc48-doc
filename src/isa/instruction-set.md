@@ -13,14 +13,15 @@
 | 0021   | [NOT](instruction-set/trit-wise.md#not)      | Trit-wise inversion.     |
 | 0022   | [ADD](instruction-set/arithmetic.md#add)     | Integer addition.        |
 | 0100   | [SUB](instruction-set/arithmetic.md#sub)     | Integer subtraction.     |
-| 0101   | [UMUL](instruction-set/arithmetic.md#umul)   | Unsigned multiplication. |
-| 0102   | [UDIV](instruction-set/arithmetic.md#udiv)   | Unsigned division.       |
-| 0110   | [SMUL](instruction-set/arithmetic.md#smul)   | Signed multiplication.   |
-| 0111   | [SDIV](instruction-set/arithmetic.md#sdiv)   | Signed division.         |
-| 0112   | [IN](instruction-set/input-output.md#in)     | Input from port.         |
-| 0120   | [OUT](instruction-set/input-output.md#out)   | Output to port.          |
-| 0121   | [LOAD](instruction-set/memory-ops.md#load)   | Load from memory.        |
-| 0122   | [STORE](instruction-set/memory-ops.md#store) | Store to memory.         |
+| 0101   | [NEG](instruction-set/arithmetic.md#neg)     | Signed integer negation. |
+| 0102   | [UMUL](instruction-set/arithmetic.md#umul)   | Unsigned multiplication. |
+| 0110   | [UDIV](instruction-set/arithmetic.md#udiv)   | Unsigned division.       |
+| 0111   | [SMUL](instruction-set/arithmetic.md#smul)   | Signed multiplication.   |
+| 0112   | [SDIV](instruction-set/arithmetic.md#sdiv)   | Signed division.         |
+| 0120   | [IN](instruction-set/input-output.md#in)     | Input from port.         |
+| 0121   | [OUT](instruction-set/input-output.md#out)   | Output to port.          |
+| 0122   | [LOAD](instruction-set/memory-ops.md#load)   | Load from memory.        |
+| 0200   | [STORE](instruction-set/memory-ops.md#store) | Store to memory.         |
 
 ## Descriptions
 - [Arithmetic Operations](instruction-set/arithmetic.md)

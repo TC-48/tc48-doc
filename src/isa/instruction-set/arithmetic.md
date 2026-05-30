@@ -19,18 +19,25 @@ Performs integer subtraction of two operands.
 - **Operation:** `dst = src1 - src2`
 - **Flags:** Updates S (status), C (borrow), and V (overflow).
 
+### NEG
+Performs signed integer negation.
+- **Opcode**: `0101`
+- **Formats:** `RR`, `RI`
+- **Operation:** `dst = -src`
+- **Flags:** Updates S (status).
+
 ## Multiplication and Division
 
 ### UMUL
 Performs unsigned integer multiplication.
-- **Opcode:** `0101`
+- **Opcode:** `0102`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 * src2`
 - **Flags:** Updates S (status) and C (carry).
 
 ### UDIV
 Performs unsigned integer division.
-- **Opcode:** `0102`
+- **Opcode:** `0110`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 / src2`
 - **Division by Zero:** If the divisor is zero, the result is zero.
@@ -38,14 +45,14 @@ Performs unsigned integer division.
 
 ### SMUL
 Performs signed integer multiplication.
-- **Opcode:** `0110`
+- **Opcode:** `0111`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 * src2`
 - **Flags:** Updates S (status) and V (overflow).
 
 ### SDIV
 Performs signed integer division.
-- **Opcode:** `0111`
+- **Opcode:** `0112`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 / src2`
 - **Division by Zero:** If the divisor is zero, the result is zero.
