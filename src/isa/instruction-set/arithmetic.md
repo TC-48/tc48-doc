@@ -10,21 +10,25 @@ Performs integer addition of two operands.
 - **Opcode:** `0022`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 + src2`
-- **Flags:** Updates S (status), C (carry), and V (overflow).
+- **Flags:**
+    - **STAT (1):** Updates S (status).
+    - **FULL (2):** Updates S, C (carry), and V (overflow).
 
 ### SUB
 Performs integer subtraction of two operands.
 - **Opcode:** `0100`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 - src2`
-- **Flags:** Updates S (status), C (borrow), and V (overflow).
+- **Flags:**
+    - **STAT (1):** Updates S (status).
+    - **FULL (2):** Updates S, C (borrow), and V (overflow).
 
 ### NEG
 Performs signed integer negation.
 - **Opcode**: `0101`
 - **Formats:** `RR`, `RI`
 - **Operation:** `dst = -src`
-- **Flags:** Updates S (status).
+- **Flags:** Updates S (status) if WCFR is **STAT** or **FULL**.
 
 ## Multiplication and Division
 
@@ -33,7 +37,9 @@ Performs unsigned integer multiplication.
 - **Opcode:** `0102`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 * src2`
-- **Flags:** Updates S (status) and C (carry).
+- **Flags:**
+    - **STAT (1):** Updates S (status).
+    - **FULL (2):** Updates S and C (carry).
 
 ### UDIV
 Performs unsigned integer division.
@@ -41,14 +47,16 @@ Performs unsigned integer division.
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 / src2`
 - **Division by Zero:** If the divisor is zero, the result is zero.
-- **Flags:** Updates S (status).
+- **Flags:** Updates S (status) if WCFR is **STAT** or **FULL**.
 
 ### SMUL
 Performs signed integer multiplication.
 - **Opcode:** `0111`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 * src2`
-- **Flags:** Updates S (status) and V (overflow).
+- **Flags:**
+    - **STAT (1):** Updates S (status).
+    - **FULL (2):** Updates S and V (overflow).
 
 ### SDIV
 Performs signed integer division.
@@ -56,4 +64,4 @@ Performs signed integer division.
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 / src2`
 - **Division by Zero:** If the divisor is zero, the result is zero.
-- **Flags:** Updates S (status).
+- **Flags:** Updates S (status) if WCFR is **STAT** or **FULL**.

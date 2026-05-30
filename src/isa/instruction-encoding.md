@@ -43,12 +43,13 @@ The width field specifies the size of registers and immediate operands in the in
 ### WCFR (1 trit)
 
 The Write Current Flags Register (WCFR) trit controls whether the instruction updates the status flags.
+It acts as a global mask for flag updates.
 
-| Value | Name  | Description                   |
-|-------|-------|-------------------------------|
-| 0     | NONE  | No flags are updated          |
-| 1     | STAT  | Update S (status) flag        |
-| 2     | FULL  | Update all flags (S, C, V)    |
+| Value | Name | Description                                              |
+|-------|------|----------------------------------------------------------|
+| 0     | NONE | No flags are modified.                                   |
+| 1     | STAT | Only the S (status) flag is updated.                     |
+| 2     | FULL | All flags supported by the opcode (S, C, V) are updated. |
 
 ### Predicate (3 trits)
 
@@ -85,7 +86,7 @@ Registers are encoded using one tryte (6 trits):
 | Trits | Width      | Field | Description         |
 |-------|------------|-------|---------------------|
 | 0–3   | quadruplet | Base  | Register base ID    |
-| 4–5   | doublet    | Lane  | Register lane (0–8) |
+| 4–5   | doublet    | Lane  | Register lane (0–7) |
 
 ## Immediate Encoding
 
