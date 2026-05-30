@@ -2,6 +2,9 @@
 
 - [Introduction](introduction.md)
 
+## Memory
+- [Word Definitions](memory/words.md)
+
 ## ISA
 - [Instruction Encoding](isa/instruction-encoding.md)
 - [Instruction Set](isa/instruction-set.md)
