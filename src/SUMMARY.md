@@ -4,6 +4,7 @@
 
 ## Memory
 - [Word Definitions](memory/words.md)
+- [Signed Integers](memory/signed-ints.md)
 
 ## ISA
 - [Instruction Encoding](isa/instruction-encoding.md)

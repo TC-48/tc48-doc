@@ -4,3 +4,5 @@ authors = ["Maqix"]
 language = "en"
 src = "src"
 
+[output.html]
+mathjax-support = true
