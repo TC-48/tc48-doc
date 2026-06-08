@@ -19,15 +19,15 @@ The header is a 12-trit quarter-word, structured as follows:
 
 The format field determines how many registers and immediates follow the header.
 
-| Value | Name | Operands    | Description                      |
-|-------|------|-------------|----------------------------------|
-| 00    | NONE | None        | No additional operands.          |
-| 01    | R    | r1          | Single register operand.         |
-| 02    | I    | imm         | Single immediate operand.        |
-| 10    | RR   | r1, r2      | Two register operands.           |
-| 11    | RRR  | r1, r2, r3  | Three register operands.         |
-| 12    | RI   | r1, imm     | One register and one immediate.  |
-| 20    | RRI  | r1, r2, imm | Two registers and one immediate. |
+| Value | Name | Operands     | Description                        |
+|-------|------|--------------|------------------------------------|
+| 00    | NONE | None         | No additional operands.            |
+| 01    | R    | r1           | Single register operand.           |
+| 02    | RRA  | r1, r2, addr | Two registers and 48-trit address. |
+| 10    | RR   | r1, r2       | Two register operands.             |
+| 11    | RRR  | r1, r2, r3   | Three register operands.           |
+| 12    | RI   | r1, imm      | One register and one immediate.    |
+| 20    | RRI  | r1, r2, imm  | Two registers and one immediate.   |
 
 ### Width (2 trits)
 
@@ -88,7 +88,9 @@ Registers are encoded using one tryte (6 trits):
 | 0–3   | quadruplet | Base  | Register base ID    |
 | 4–5   | doublet    | Lane  | Register lane (0–7) |
 
-## Immediate Encoding
+## Immediate and Address Encoding
 
-Immediate values follow the header (and any registers) and their size is determined by the [Width](#width-2-trits) field in the instruction header.
-They are encoded as standard Big-Endian ternary values.
+Values follow the header and any registers:
+
+- **Immediates (`imm`):** Size is determined by the [Width](#width-2-trits) field in the instruction header. They are encoded as standard Big-Endian ternary values.
+- **Addresses (`addr`):** **Always 48 trits (Word)**, regardless of the instruction header's width field. Used as a full-range offset in memory operations.
