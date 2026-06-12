@@ -17,3 +17,7 @@
 - [Memory Operations](isa/instruction-set/memory-ops.md)
 - [Input/Output Operations](isa/instruction-set/input-output.md)
 - [Other Operations](isa/instruction-set/other.md)
+
+## I/O System
+- [PMIO Model](io/pmio.md)
+- [Bus Controller](io/bus-controller.md)
