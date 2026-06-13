@@ -17,20 +17,18 @@ The TC-48 instruction set is intentionally minimal yet fully functional.
 
 ## Terminology and Conventions
 
-* **trit**: A single ternary (base-3) digit - values **0, 1, or 2**.
-* **doublet**: Two trits; not addressable, but used in instruction representation, since they are trit-packed.
-* **triplet**: Three trits; not addressable, but used in instruction representation.
-* **quadruplet**: Four trits; not addressable, but used in instruction representation.
+- **trit**: A single ternary (base-3) digit - values **0, 1, or 2**.
+- **doublet**: Two trits; not addressable, but used in instruction representation, since they are trit-packed.
+- **triplet**: Three trits; not addressable, but used in instruction representation.
+- **quadruplet**: Four trits; not addressable, but used in instruction representation.
 
-* **tryte**: The minimum addressable unit - **6 trits**.
-* **quarter**: One-quarter of a word (two trytes) - **12 trits**.
-* **half**: Half of a word (four trytes) - **24 trits**.
-* **word**: The full machine word - **48 trits**.
+- **tryte**: The minimum addressable unit - **6 trits**.
+- **quarter**: One-quarter of a word (two trytes) - **12 trits**.
+- **half**: Half of a word (four trytes) - **24 trits**.
+- **word**: The full machine word - **48 trits**.
 
-* **RAZ/AZ register** - Register with ID 0; its value is always zero, and all writes to it are ignored.
-* **RCF/CF register** - Register containing current execution flags (S, V, C).
-* **RIP/IP register** - Register containing the address of the next instruction to be executed by the CPU.
-* **RSP/SP register** - Register that holds the memory address of the top of the stack.
+- **MST**: Most significant trit.
+- **LST**: Least significant trit.
 
 ## Document Scope
 This document defines
