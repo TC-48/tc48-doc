@@ -26,15 +26,15 @@ The Bus Controller occupies 5 ports.
 
 ### Notes
 
-> [!NOTE]
-> The Bus Controller itself is included in the device list.
+!!! note
+    The Bus Controller itself is included in the device list.
 
-> [!WARNING]
-> If an invalid index ($\ge$ `device-count`) is written to `select`,
-> reading `selected-type`, `selected-base`, and `selected-ports` will return `0`.
+!!! warning
+    If an invalid index ($\ge$ `device-count`) is written to `select`,
+    reading `selected-type`, `selected-base`, and `selected-ports` will return `0`.
 
-> [!NOTE]
-> On system reset, `selected-index` is automatically initialized to `0`.
+!!! note
+    On system reset, `selected-index` is automatically initialized to `0`.
 
 ## Discovery Procedure
 

@@ -6,7 +6,7 @@ All memory operations use a base-plus-offset addressing mode.
 ## Addressing Mode
 
 Effective addresses are calculated by adding a **Base Register** and an **Offset**:
-`Effective Address = Base + SignExtend(Offset)`
+\\[ \text{Effective Address} = \text{Base} + \text{SignExtend}(\text{Offset}) \\]
 
 - **Base Register:** Always treated as a full 48-trit Word.
 - **Offset:** Can be a register or an immediate value. In memory operations, the offset is **always treated as a full 48-trit Word** for the address calculation.
@@ -16,6 +16,7 @@ Effective addresses are calculated by adding a **Base Register** and an **Offset
 
 ### LOAD
 Loads a value from memory into a register.
+
 - **Opcode:** `0122`
 - **Formats:** `RRR`, `RRA`
 - **Operation:** `dst = Memory[base + offset]`
@@ -25,6 +26,7 @@ Loads a value from memory into a register.
 
 ### STORE
 Stores a value from a register into memory.
+
 - **Opcode:** `0200`
 - **Formats:** `RRR`, `RRA`
 - **Operation:** `Memory[base + offset] = src`

@@ -7,6 +7,7 @@ These operations can update status flags (S, V, C) depending on the `WCFR` field
 
 ### ADD
 Performs integer addition of two operands.
+
 - **Opcode:** `0022`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 + src2`
@@ -16,6 +17,7 @@ Performs integer addition of two operands.
 
 ### SUB
 Performs integer subtraction of two operands.
+
 - **Opcode:** `0100`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 - src2`
@@ -25,6 +27,7 @@ Performs integer subtraction of two operands.
 
 ### NEG
 Performs signed integer negation.
+
 - **Opcode**: `0101`
 - **Formats:** `RR`, `RI`
 - **Operation:** `dst = -src`
@@ -34,6 +37,7 @@ Performs signed integer negation.
 
 ### UMUL
 Performs unsigned integer multiplication.
+
 - **Opcode:** `0102`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 * src2`
@@ -43,6 +47,7 @@ Performs unsigned integer multiplication.
 
 ### UDIV
 Performs unsigned integer division.
+
 - **Opcode:** `0110`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 / src2`
@@ -51,6 +56,7 @@ Performs unsigned integer division.
 
 ### SMUL
 Performs signed integer multiplication.
+
 - **Opcode:** `0111`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 * src2`
@@ -60,6 +66,7 @@ Performs signed integer multiplication.
 
 ### SDIV
 Performs signed integer division.
+
 - **Opcode:** `0112`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = src1 / src2`

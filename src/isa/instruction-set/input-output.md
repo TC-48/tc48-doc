@@ -17,6 +17,7 @@ Effective port addresses are calculated by adding a **Base Register** and an **O
 
 ### IN
 Reads a value from an I/O port into a register.
+
 - **Opcode:** `0120`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `dst = Port[base + offset]`
@@ -26,6 +27,7 @@ Reads a value from an I/O port into a register.
 
 ### OUT
 Writes a value from a register to an I/O port.
+
 - **Opcode:** `0121`
 - **Formats:** `RRR`, `RRI`
 - **Operation:** `Port[base + offset] = src`

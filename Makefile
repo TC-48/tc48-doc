@@ -1,7 +1,11 @@
-MDBOOK := mdbook
+MKDOCS ?= mkdocs
 
-.PHONY: all docs
+.PHONY: all docs serve dev
 all: docs
 
 docs:
-	mdbook build
+	$(MKDOCS) build
+serve:
+	$(MKDOCS) serve
+dev:
+	$(MKDOCS) serve --livereload
