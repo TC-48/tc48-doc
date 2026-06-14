@@ -1,8 +1,0 @@
-[book]
-title = "TC-48 Architecture Documentation"
-authors = ["Maqix"]
-language = "en"
-src = "src"
-
-[output.html]
-mathjax-support = true
