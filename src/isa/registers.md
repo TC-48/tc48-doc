@@ -42,12 +42,12 @@ The register file contains 59 active registers.
 
 ### Special Purpose Registers (SPR)
 
-| Register | Name                | Index  | Primary Function                                     |
-|:---------|:--------------------|:-------|:-----------------------------------------------------|
-| **`az`** | Always Zero         | `0000` | Hardwired to zero; discards writes.                  |
-| **`cf`** | Current Flags       | `0001` | Stores processor status flags for conditional logic. |
-| **`ip`** | Instruction Pointer | `0002` | Holds the memory address of the next instruction.    |
-| **`sp`** | Stack Pointer       | `0010` | Holds the memory address of the top of the stack.    |
+| Register | Name                | Index          | Primary Function                                     |
+|:---------|:--------------------|:---------------|:-----------------------------------------------------|
+| **`az`** | Always Zero         | \\(0000_{3}\\) | Hardwired to zero; discards writes.                  |
+| **`cf`** | Current Flags       | \\(0001_{3}\\) | Stores processor status flags for conditional logic. |
+| **`ip`** | Instruction Pointer | \\(0002_{3}\\) | Holds the memory address of the next instruction.    |
+| **`sp`** | Stack Pointer       | \\(0010_{3}\\) | Holds the memory address of the top of the stack.    |
 
 #### `az` (Always Zero)
 * **Index:** \\(0000_{3} = 0_{10}\\)
@@ -83,9 +83,9 @@ The architecture provides **32 general-purpose registers** reserved for general 
 * **Index Range:** \\([1000_{3} = 27_{10}, 2011_{3} = 58_{10}]\\) (GPR Base is 27)
 * **Assembly Notation:** `r0` through `r31`
 
-| Assembly Alias | Hardware Index |
-|:---------------|:---------------|
-| `r0`           | 27             |
-| `r1`           | 28             |
-| `...`          | `...`          |
-| `r31`          | 58             |
+| Assembly Alias | Hardware Index           |
+|:---------------|:-------------------------|
+| `r0`           | \\(1000_{3} = 27_{10}\\) |
+| `r1`           | \\(1001_{3} = 28_{10}\\) |
+| `...`          | `...`                    |
+| `r31`          | \\(2011_{3} = 58_{10}\\) |

@@ -19,15 +19,15 @@ The header is a 12-trit quarter-word, structured as follows:
 
 The format field determines how many registers and immediates follow the header.
 
-| Value | Name | Operands     | Description                        |
-|-------|------|--------------|------------------------------------|
-| 00    | NONE | None         | No additional operands.            |
-| 01    | R    | r1           | Single register operand.           |
-| 02    | RRA  | r1, r2, addr | Two registers and 48-trit address. |
-| 10    | RR   | r1, r2       | Two register operands.             |
-| 11    | RRR  | r1, r2, r3   | Three register operands.           |
-| 12    | RI   | r1, imm      | One register and one immediate.    |
-| 20    | RRI  | r1, r2, imm  | Two registers and one immediate.   |
+| Value        | Name | Operands     | Description                        |
+|--------------|------|--------------|------------------------------------|
+| \\(00_{3}\\) | NONE | None         | No additional operands.            |
+| \\(01_{3}\\) | R    | r1           | Single register operand.           |
+| \\(02_{3}\\) | RRA  | r1, r2, addr | Two registers and 48-trit address. |
+| \\(10_{3}\\) | RR   | r1, r2       | Two register operands.             |
+| \\(11_{3}\\) | RRR  | r1, r2, r3   | Three register operands.           |
+| \\(12_{3}\\) | RI   | r1, imm      | One register and one immediate.    |
+| \\(20_{3}\\) | RRI  | r1, r2, imm  | Two registers and one immediate.   |
 
 ### Width (2 trits)
 
